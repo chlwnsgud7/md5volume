@@ -1,4 +1,10 @@
-#include <bits/stdc++.h>
+#include <string>
+#include <vector>
+#include <sstream>
+#include <thread>
+#include <iostream>
+#include <cstdio>
+#include <cstdint>
 
 #include <sys/socket.h>
 #include <netinet/in.h>
@@ -205,7 +211,7 @@ int main() {
     addr.sin_addr.s_addr = INADDR_ANY;
     addr.sin_port        = htons(8080);
 
-    bind(sfd, (sockaddr*)&addr, sizeof(addr));
+    ::bind(sfd, (sockaddr*)&addr, sizeof(addr));
     listen(sfd, 16);
     cerr << "http://localhost:8080\n";
 
